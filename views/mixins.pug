@@ -1,0 +1,35 @@
+mixin header()  
+  .header
+    .header-container
+      img(src="", alt="").logo
+      ul.page-list
+        li 
+          a(href="/") Home
+        li 
+          a(href="/about") About
+        li 
+          a(href="/research") Research
+
+mixin description-box(content)
+  .description-box
+    img(src="placeholder-large.png").related-photo
+    .description
+      h1=content.heading
+      h3=content.subheading
+      p=content.description
+
+mixin footer()
+  .footer
+    .links
+      img(src="", alt="")
+      img(src="", alt="")
+      img(src="", alt="")
+      img(src="", alt="")
+
+mixin card(content)
+  a(href=content.link)
+    li.card
+      img(src=content.source)
+      h3=content.heading
+      span=content.keywords 
+      p=content.description

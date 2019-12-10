@@ -1,0 +1,26 @@
+.about {
+  width: 1024px;
+  margin-bottom: 24px;
+}
+.about h2 {
+  margin-bottom: 0px;
+}
+.contact {
+  width: 1024px;
+  margin-bottom: 100px;
+}
+.contact .location {
+  display: grid;
+  grid-template-columns: 1fr 1.75fr;
+  grid-template-rows: auto;
+}
+.contact .location p span {
+  display: block;
+  font-weight: 700;
+  color: #000;
+}
+.contact .location #map {
+  width: auto;
+  height: 350px;
+  background-color: #808080;
+}

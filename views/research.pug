@@ -1,0 +1,26 @@
+include mixins.pug
+
+doctype html
+html
+  head
+    title Research 
+    link(rel='stylesheet', href='/research.css')
+    link(rel="stylesheet", href='/default.css')
+    link(href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet")
+body
+  +header()
+  
+  -const cardInfo = {link: '/research/project', source: 'placeholder-small.png', heading: 'Lorem ipsum project', keywords: 'LOREM IPSUM', description: 'Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Proin laoreet lacus id urna euismod auctor. Integer eget leo sit amet arcu imperdiet imperdiet.'};
+  .research-projects
+    h1 Research Projects
+    hr.shortline
+    ul.project-list
+        +card(cardInfo)
+        +card(cardInfo)
+        +card(cardInfo)
+        +card(cardInfo)
+        +card(cardInfo)
+        +card(cardInfo)
+        +card(cardInfo)
+
+  +footer()

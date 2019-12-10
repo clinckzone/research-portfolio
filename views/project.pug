@@ -1,0 +1,42 @@
+include mixins.pug
+
+doctype html
+html
+  head
+    title Project Title
+    link(rel='stylesheet', href='/project.css')
+    link(rel="stylesheet", href='/default.css')
+    link(href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet")
+   
+  body
+    +header()
+
+    .project
+      h1 Project Title
+     
+      h2 About
+      hr
+      p Quisque ut massa purus. Fusce id varius dolor. Integer vulputate velit in maximus pellentesque. Nulla metus lacus, scelerisque vel tempor nec, tempor finibus neque. Nullam non libero lacinia, bibendum justo in, molestie massa. Aliquam erat volutpat. Nam efficitur leo eu mauris consequat, vel scelerisque orci dictum. Nulla fringilla arcu nec consectetur rhoncus. Donec lacinia ac sapien vel mollis. Vestibulum gravida, nisi a fermentum ultricies, augue magna eleifend lacus, eu molestie libero nisl eu massa. Aenean venenatis magna in consectetur cursus. Aenean eget massa vel metus cursus fringilla. Donec turpis est, malesuada eu ultricies feugiat, euismod vitae ipsum. Proin fringilla tincidunt massa, quis ullamcorper nibh tincidunt vel.
+      p Phasellus sed rhoncus orci, ut ultricies orci. Mauris sed sapien ut lacus dapibus porta quis sed ex. Nullam consequat mattis porttitor. Integer sagittis justo quis urna faucibus sodales. Nunc pellentesque ac risus ultrices dapibus. In nec nulla iaculis, egestas felis vitae, venenatis nulla. Sed felis nulla, porttitor vitae molestie ac, tempus sed arcu. Nulla pretium nulla quis mauris imperdiet imperdiet. Nulla enim elit, facilisis in fermentum ut, bibendum nec magna. Nullam lobortis turpis urna, at lacinia mi fermentum et. Maecenas augue sapien, auctor vel condimentum id, lobortis nec ex. Ut consectetur velit odio, vel congue eros consectetur sit amet. Vivamus gravida nulla ac rhoncus sagittis. Vestibulum libero quam, ullamcorper vel varius ac, euismod eget purus. 
+
+      h2 Images
+      hr
+      img(src="../placeholder-small.png")
+      img(src="../placeholder-small.png")
+      img(src="../placeholder-small.png")
+      img(src="../placeholder-small.png")
+
+      h2 Contributers
+      hr 
+      ul
+        li Divyanshu Tiwari
+        li Nikhil Duggal
+        li Komal Maheshwari
+
+      h2 Research Publications
+      hr
+      ul
+        li Kolay, S. (2016). Cultural Heritage Preservation of Traditional Indian Art through Virtual New Media, Science Direct- Procedia, Elsevier.
+        li Kolay, S. &amp; Roy, S.T. (2015). Designing Alternative Paradigm for Traditional Visual Storytelling. In Howlett, R.J. &amp; Jain, L.C. (Eds.), Smart Innovation, Systems and Technologies, 34, (pp. 145-158), Springer.
+
+    +footer()

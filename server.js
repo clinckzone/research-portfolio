@@ -14,9 +14,19 @@ server.use(express.static(__dirname + "/scripts"));
 server.use(express.static(__dirname + "/data"));
 
 server.get("/", function(req, res) {
-  res.render("index", {
-    title: "Home",
-  });
+  res.render("index");
+});
+
+server.get("/about", function(req, res) {
+  res.render("about.pug");
+});
+
+server.get("/research", function(req, res) {
+  res.render("research");
+});
+
+server.get("/research/project", function(req, res) {
+  res.render("project");
 });
 
 server.listen(port, function() {
