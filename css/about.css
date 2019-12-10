@@ -1,6 +1,7 @@
 .about {
   width: 1024px;
   margin-bottom: 24px;
+  height: 80vh;
 }
 .about h2 {
   margin-bottom: 0px;
@@ -15,9 +16,14 @@
   grid-template-rows: auto;
 }
 .contact .location p span {
+  margin-bottom: 1px;
   display: block;
   font-weight: 700;
+  font-size: 16px;
   color: #000;
+}
+.contact .location p span.position {
+  margin-bottom: 8px;
 }
 .contact .location #map {
   width: auto;
