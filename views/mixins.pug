@@ -1,35 +1,31 @@
 mixin header()  
   .header
     .header-container
-      img(src="", alt="").logo
+      .logo 
+        a(href="/") 💻
       ul.page-list
-        li 
-          a(href="/") Home
-        li 
+        li
           a(href="/about") About
         li 
-          a(href="/research") Research
-
-mixin description-box(content)
-  .description-box
-    img(src="placeholder-large.png").related-photo
-    .description
-      h1=content.heading
-      h3=content.subheading
-      p=content.description
+          a(href="/blog") Blog
+        li 
+          a(href="/projects") Projects
 
 mixin footer()
   .footer
     .links
-      img(src="", alt="")
-      img(src="", alt="")
-      img(src="", alt="")
-      img(src="", alt="")
+      a(href="https://twitter.com/clinckzone" alt="Twitter").fa.fa-twitter
+      a(href="https://www.youtube.com/user/MrDivyanshu33" alt="Youtube").fa.fa-youtube
+      a(href="https://www.behance.net/divyanshu33" alt="Behance").fa.fa-behance
+      a(href="https://github.com/clinckzone" alt="Github").fa.fa-github
+      a(href="https://www.linkedin.com/in/divyanshu-tiwari33/" alt="Linkedin").fa.fa-linkedin
 
 mixin card(content)
   a(href=content.link)
     li.card
       img(src=content.source)
-      h3=content.heading
-      span=content.keywords 
+      h3=content.title
+      span=content.keywords[0]
+      span=content.keywords[1]
+      span=content.keywords[2]
       p=content.description

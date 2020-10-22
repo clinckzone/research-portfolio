@@ -1,58 +1,17 @@
-include mixins.pug
+extends default.pug
 
-doctype html
-html
-  head
-    title About 
-    link(rel='stylesheet', href='/about.css')
-    link(rel="stylesheet", href='/default.css')
-    link(href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet")
-    script.
-      function initMap() {
-        var uluru = {lat: 29.863937, lng: 77.899778};
-        var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 4, center: uluru});
-        var marker = new google.maps.Marker({position: uluru, map: map});
-      }
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr5YbI1ob7BR5U_rwE2UnufWoQY35p2Iw&callback=initMap")
-
-body
-  +header()
-
-  //- -const content = {heading: 'Saptarshi Kolay', subheading: 'Assitant Professor', description: 'Vestibulum aliquam nulla vel malesuada suscipit. Nam magna ante, consectetur non elit vitae, auctor euismod ipsum. Cras libero quam, luctus sed mi a, eleifend tincidunt elit. In pharetra laoreet sodales. Proin vestibulum mollis tristique. Nam dignissim ante elit, non dictum odio tincidunt ac.\nQuisque enim odio, semper in ligula nec, molestie auctor nisi. Sed mollis metus quis finibus tincidunt. In lacinia ullamcorper lectus, quis commodo augue cursus eget. Quisque eleifend fringilla quam, nec porta est viverra ac. Cras pulvinar enim vitae ultrices tristique.'}
-  //- +description-box(content)
-
-  .about
+block content
+  .page
     h1 About
-    hr.shortline
-    p(style="margin-top: 0px") Ut vitae sapien ullamcorper, faucibus metus non, mattis tortor. Nullam sem lacus, hendrerit at neque et, placerat commodo sapien. Nunc blandit sit amet justo at blandit. Vestibulum efficitur libero egestas sapien faucibus lacinia. Phasellus efficitur vulputate aliquet. Donec nibh purus, viverra rhoncus enim nec, lacinia auctor tellus. 
-    p Sed lobortis bibendum libero, nec feugiat augue pulvinar eu. Nulla scelerisque, arcu nec consectetur ornare, felis lectus maximus leo, non dignissim quam quam nec est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat velit, laoreet in mauris at, tempus tincidunt nibh. 
+    hr.line
+    
+    p Hello, my name is Divyanshu Tiwari, and I am a 4th year undergraduate student of Architecture at the Indian Institute of Technology Roorkee, India. Broadly speaking, I am mainly interested in exploring new and creative ways of using technology.
+    p For more details about me, please go through the rest of this page and website. You can also have a look at my
+      a(href="https://itp.nyu.edu/shows/winter2017/into-the-darkness") resume
+      |.
 
-    h2 Bibendum
-    hr.longline
-    p Sed lobortis bibendum libero, nec feugiat augue pulvinar eu. Nulla scelerisque, arcu nec consectetur ornare, felis lectus maximus leo, non dignissim quam quam nec est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat velit, laoreet in mauris at, tempus tincidunt nibh. 
-    p Nullam non orci sem. Ut vehicula rutrum congue. Nulla facilisi. Ut non felis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas ac lacus posuere, sagittis turpis ut, lacinia metus. Curabitur eros ex, viverra eget fermentum sit amet, hendrerit ac libero. 
-    
-    h2 Feugiat
-    hr.longline
-    p Nullam non orci sem. Ut vehicula rutrum congue. Nulla facilisi. Ut non felis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas ac lacus posuere, sagittis turpis ut, lacinia metus. Curabitur eros ex, viverra eget fermentum sit amet, hendrerit ac libero. 
-    
-    h2 Scelerisque
-    hr.longline
-    p Nullam non orci sem. Ut vehicula rutrum congue. Nulla facilisi. Ut non felis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas ac lacus posuere, sagittis turpis ut, lacinia metus. Curabitur eros ex, viverra eget fermentum sit amet, hendrerit ac libero. 
-  
-  .contact
-    h1 Contact
-    hr.shortline
-    .location
-      p
-        span.name Prof. Saptarshi Kolay
-        span.position Assistant Professor
-        | Indian Institute of Technology Roorkee
-        br
-        | Haridwar Highway, Roorkee
-        br
-        | Uttrakhand 247667
-      #map
-  
-  +footer()
+    h2 Research Interests
+    p My research interest is primarily in the area of Human Computer Interaction (HCI) with a focus on Tangible Interfaces, Emergent Interfaces and Novel Interaction Techniques.
+
+    h2 Academic Experience
+    p 

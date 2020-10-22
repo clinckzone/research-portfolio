@@ -1,33 +1,40 @@
 var express = require("express");
+var projects = require("./routes/projects");
+var blog = require("./routes/blog");
 var server = express();
 
+var ARTICLES = require("./data/articles");
+var PROJECTS = require("./data/projects");
+
 server.set('view engine', "pug");
-
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-
 server.use(express.static(__dirname + "/css"));
 server.use(express.static(__dirname + "/images"));
 server.use(express.static(__dirname + "/scripts"));
 server.use(express.static(__dirname + "/data"));
 
+server.use("/projects", projects);
+server.use("/blog", blog);
+
 server.get("/", function(req, res) {
-  res.render("index");
+  res.render("index", {
+    title: 'Home',
+    stylesheet:'index.css',
+    projects: PROJECTS,
+    articles: ARTICLES
+  });
 });
 
 server.get("/about", function(req, res) {
-  res.render("about.pug");
+  res.render("about.pug", {
+    title: 'About',
+    stylesheet: 'page.css'
+  });
 });
 
-server.get("/research", function(req, res) {
-  res.render("research");
-});
-
-server.get("/research/project", function(req, res) {
-  res.render("project");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 server.listen(port, function() {
   console.log("Server is running on " +port);

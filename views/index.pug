@@ -1,25 +1,21 @@
-include mixins.pug
+extends default.pug
 
-doctype html
-html
-  head
-    title Home
-    link(rel='stylesheet', href='/index.css')
-    link(rel="stylesheet", href='/default.css')
-    link(href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet")
-  body
-    +header()
+block content
 
-    -const description = {heading: 'Lorem Ipsum Lab', subheading: 'Research in porro quisquam est qui dolorem', description: 'Vestibulum aliquam nulla vel malesuada suscipit. Nam magna ante, consectetur non elit vitae, auctor euismod ipsum. Cras libero quam, luctus sed mi a, eleifend tincidunt elit. In pharetra laoreet sodales. Proin vestibulum mollis tristique. Nam dignissim ante elit, non dictum odio tincidunt ac.\nQuisque enim odio, semper in ligula nec, molestie auctor nisi. Sed mollis metus quis finibus tincidunt. In lacinia ullamcorper lectus, quis commodo augue cursus eget. Quisque eleifend fringilla quam, nec porta est viverra ac. Cras pulvinar enim vitae ultrices tristique.'};
-    +description-box(description)
+  .description-box
+    .info-card
+      img(src="divyanshu.png", alt="Here goes my image.")
+      a.resume.white(href="#") Resume
+    .description
+      h1 Hello 👋!
+      h3 I'm Divyanshu, and I love creating and exploring new and creative ways of interacting with technology.
+      a.resume.blue(href="#") Resume
 
-    -const cardInfo = {link: '/research/project', source: 'placeholder-small.png', heading: 'Lorem ipsum project', keywords: 'LOREM, IPSUM', description: 'Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Proin laoreet lacus id urna euismod auctor. Integer eget leo sit amet arcu imperdiet imperdiet.'};
-    .featured-projects
-      h1 Featured Projects
-      hr.shortline
-      ul.project-list
-        +card(cardInfo)
-        +card(cardInfo)
-        +card(cardInfo)
-
-    +footer()
+  .featured-projects
+    h1 Featured Projects
+    hr.line
+    - var i = 0
+    ul.project-list
+      while i < 3
+        +card(projects[i])
+        - i += 1
