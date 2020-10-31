@@ -7,6 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #696969;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -153,7 +154,7 @@ li a:hover {
     font-size: 28px;
   }
   h3 {
-    font-size: 22px;
+    font-size: 24px;
   }
   .header .header-container {
     width: 100%;
@@ -260,7 +261,18 @@ li a:hover {
 .description-box .description h3 {
   margin-top: 0;
   font-weight: 400;
-  color: #c3c3c3;
+  color: #a8a8a8;
+}
+.description-box .description hr {
+  height: 2px;
+  border: none;
+  background: #dcdcdc;
+  margin-bottom: 36px;
+}
+.description-box .description p {
+  font-weight: 600;
+  font-size: 18px;
+  color: #585858;
 }
 .description-box .resume {
   display: flex;
@@ -326,6 +338,9 @@ li a:hover {
   }
   .description-box .description h3 {
     font-size: 20px;
+  }
+  .description-box .description p {
+    font-size: 16px;
   }
   .featured-projects {
     width: 100vw;
