@@ -17,6 +17,13 @@ router.get("/projects-two-shapes", function(req, res) {
   });
 });
 
+router.get("/projects-coodle", function(req, res) {
+  res.render("projects-coodle", {
+	  title: '🃏 Coodle',
+	  stylesheet: '../page.css'
+  });
+});
+
 router.get("/projects-smart-ac", function(req, res) {
   res.render("projects-smart-ac", {
 	  title: '🎛️ Smart AC Controller',
