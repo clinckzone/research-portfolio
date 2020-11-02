@@ -31,14 +31,14 @@ var PROJECTS = [
 		link: "/projects/projects-destech-challenge",
 		source: "/projects-destech-challenge-cover.png",
 		title: "🥇 Destech Challenge",
-		keywords: ["Design", "Competition"],
+		keywords: ["UX", "Design", "Competition"],
 		description: "A digital platform to capture local urban trails through smartphones to let creatives capture, encapsulate and share their journey in a meaningful way."
 	},
 	{
 		link: "/projects/projects-static-site-generator",
 		source: "/projects-static-site-generator-cover.png",
 		title: "💻 Static Site Generator",
-		keywords: ["Mobile", "Design"],
+		keywords: ["Web", "UX", "Design"],
 		description: "Static Site Generator is a web application designed to be an easy to use tool to create simple static websites consisting of text and images."
 	},
 ]
