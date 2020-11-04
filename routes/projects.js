@@ -40,7 +40,7 @@ router.get("/projects-flappy-rockets", function(req, res) {
 
 	router.get("/projects-destech-challenge", function(req, res) {
 		res.render("projects-destech-challenge", {
-			title: '🥇 Destech Challenge',
+			title: '🥇 Urban Trails',
 			stylesheet: '../page.css'
 		});
 	});

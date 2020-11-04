@@ -30,7 +30,7 @@ var PROJECTS = [
 	{
 		link: "/projects/projects-destech-challenge",
 		source: "/projects-destech-challenge-cover.png",
-		title: "🥇 Destech Challenge",
+		title: "🥇 Urban Trails",
 		keywords: ["UX", "Design", "Competition"],
 		description: "A digital platform to capture local urban trails through smartphones to let creatives capture, encapsulate and share their journey in a meaningful way."
 	},
