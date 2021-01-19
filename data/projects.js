@@ -1,17 +1,17 @@
 var PROJECTS = [
 	{
-		link: "/projects/projects-two-shapes",
-		source: 'projects-two-shapes-cover.png',
-		title: "🕹️ Two Shapes",
-		keywords: ["Research", "Games", "HCI"],
-		description: "This project was selected for publication at CHI PLAY 2020 in the Game Design Competition. This post contains the text from the submitted paper."
-	},
-	{
 		link: "/projects/projects-coodle",
 		source: 'projects-coodle-cover.png',
 		title: "🃏 Coodle",
 		keywords: ["TUI", "HCI", "Education"],
 		description: "Coodle is an accessible, tangible programming system to help children learn and practice programming in an intuitive and engaging manner."
+	},
+	{
+		link: "/projects/projects-two-shapes",
+		source: 'projects-two-shapes-cover.png',
+		title: "🕹️ Two Shapes",
+		keywords: ["Research", "Games", "HCI"],
+		description: "This project was selected for publication at CHI PLAY 2020 in the Game Design Competition. This post contains the text from the submitted paper."
 	},
 	{
 		link: "/projects/projects-smart-ac",

@@ -6,66 +6,143 @@ block content
     hr.line
 
     p 
-      span.bold My Role: 
+      span.bold Contribution: 
       | Designed the cards and the language syntax, Designed and developed the front-end interface of the web application.
 
+    ul.single
+      li.image(style="width: 65%")
+        img(src="../projects-coodle-01.png", alt="Typical workflow of Coodle")
+        span Typical workflow of Coodle. (a) Create a program using physical blocks. (b) Capture the image of the program using the Coodle application. (c) Execute the program once compiled.
+
+    h2 Abstract
+    p With an exponential rise in technology, there is an increasing need for children to be literate in programming. However, most schools in India do not have proper access to desktop computers for teaching due to a lack of funds. For this purpose, we propose 'Coodle', a low-cost tangible
+      sup [
+          a(href="#2") 2
+          | ]
+      | programming system to help kids from low-income households in India learn and practice programming intuitively and engagingly. The system makes use of paper/cardboard blocks to make programs. It also consists of a mobile application that can then capture a snapshot of this program. The image is then processed, compiled and executed as a visual output on the mobile's screen.
+
     h2 Introduction
-    p With the rapid growth of technology in today’s era, it has become more important than ever that the current generation of students that are growing up, develop a preliminary understanding of how computers are programmed so as to develop an understanding relationship with their digital world. In a country like India that lacks proper access to desktop computers in the majority of its schools requires an alternative solution that can better adapt to its current economic condition. To overcome this problem, we developed ‘Coodle’, an accessible system that makes use of tangible physical cards to write programs. The system also consists of a mobile and web application that can capture the image of the program made by arranging the blocks. This image is then processed over the internet and the resulting compiled program is displayed on the screen as a visual output.
+    p With the rapid growth of technology in today's era, it has become ever more critical that children's current generation develops a preliminary understanding of how computers are programmed and develop an understanding relationship with their digital world. In a country like India that lacks proper access to desktop computers in most of its schools, it requires an alternate solution that can better adapt to its current economic condition. 
+
+    p To address this problem, we have developed 'Coodle', a low-cost tangible programming system that uses paper/cardboard blocks to make programs. It also consists of a mobile application that can then capture a snapshot of this program. The image is then processed over the internet, and the resulting compiled program is executed on the mobile screen as a visual output.
+
+    p Coodle leverages the impact of two significant changes that India has witnessed in its digital infrastructure in the recent past:
+
+    ul
+      li There has been a boom in internet access and usage throughout the country due to affordable internet prices.
+      li There has been a considerable increase in the availability of cheap smartphones in the Indian market.
+
+    p These changes enable Coodle to be a low-cost alternative for kids to learn to program.
+
+    h2 Related Work
+    p Several programming environments have previously been developed to teach children programming. Each made use of a different user interface to make programming intuitive and engaging for children. One of the first such attempts was by Papert et al., who developed the programming language called Logo
+      sup [
+          a(href="#6") 6
+          | ]
+      |. It has a turtle that draws various geometric shapes on the screen depending upon its commands. The commands were given as text input through a keyboard.
+
+    p Scratch
+      sup [
+          a(href="#4") 4
+          | ]
+      | is another programming language which makes use of virtual blocks for making programs. Programs are made by stacking these blocks on each other using a mouse pointer. Children could make their own stories, games and animation using it.
+
+    p Furthermore, other than digital programming environments, several tangible programming environments have also been proposed. TurTan
+      sup [
+            a(href="#1") 1
+            | ]
+      |, for example, is a logo like programming language that draws graphics in real-time based on the order and angle of blocks placed on a table. Our project is closely related to Code Weaver
+      sup [
+          a(href="#8") 8
+          | ]
+      |, which uses tangible blocks for making programs that can draw geometric shapes. It uses a camera to detect markers on the cards and a projector to display the execution results on the same table where the cards are placed.
+
+    p However, our project Coodle uses ubiquitous technologies like mobile phones and the internet to make the same intuitive and engaging experience of interacting with tangibles more affordable and portable. Since processing and execution occur on mobile, multiple participants can choose to either collaborate or work individually with their cards.
 
     ul.single
-      li.image(style="width: 25%")
-        img(src="../projects-coodle-01.png", alt="A sample Coodle program")
-        span A sample Coddle program
-
-    p There are several reasons as to why Coodle is an accessible solution. Firstly, India has been witnessing a boom in its internet accessibility due to telecommunication companies like Jio that are offering cheap internet access in rural areas. On top of this, there has also been a huge increase in the availability of cheap smartphones in the Indian market making it a common term even in the rural households. Lastly, since it makes use of paper cards, they can be reproduced at a much cheaper price.
+      li.image(style="width: 45%")
+        img(src="../projects-coodle-02.png", alt="A sample Coodle program")
+        span A Coodle program that draws a triangle upon execution. During execution, the application also displays the current line that is being executed.
 
     h2 User Interface
-    p Traditional methods of teaching lay emphasis on a particular programming language (like C++) and its syntax rather than on problem-solving approaches. Also with interfaces like keyboards, there comes difficulties and challenges associated with group learning involving multiple participants. By using a tangible interface, we are able to reduce the cognitive burden on children by allowing them to select from a set of physical cards instead of having them to memorize syntax rules. This way they are able to think more about the problem that they are trying to solve rather than the tool that they are using. Furthermore, a tangible interface naturally promotes children to collaborate on different problems and projects together since they feel like they are playing together rather than studying. In such a collaborative environment any student that develops new skills, feels a sense of responsibility to share their skills with others.
-
-    ul.single
-      li.video(style="width: 70%")
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/IQGWQPZVYGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-        span Interaction Demo
+    p There are two parts to the user interface of Coodle. Firstly, there is a tangible component composed of paper/cardboard blocks that can be freely arranged anywhere to make programs. Then there is a digital component based on mobile. It captures the program's image and then processes, compiles and executes it as a visual output on its screen. In this section, we describe both of these parts individually.
 
     h3 Blocks
-    p Children use these blocks to write their programs by arranging them in physical space. The Coodle language consists of simple geometrical commands like 
-    span.bold FORWARD
-    | , 
-    span.bold BACKWARD
-    | , 
-    span.bold RIGHT
-    | , 
-    span.bold LEFT
-    | , 
-    span.bold ROTATE 
-    | and control statements like 
-    span.bold START
-    | , 
-    span.bold STOP
-    | , 
-    span.bold REPEAT
-    | , 
-    span.bold END REPEAT 
-    | which when combined together can be used to draw out shapes and patterns on the screen. There were three main aspects that were taken care of while designing the blocks, mainly its colour, symbol and text. Each block has been assigned  a different symbol as per its function so that their function and usage is understandable visually. Also, blocks of different types have been assigned different colours so that visually it becomes easier to identify nested chunks of blocks. For example, 
-    span.bold START 
-    | and 
-    span.bold STOP 
-    | blocks are in red colour so that they can map out the entire territory within which the program resides.
+    p With Coodle, we sought to deliver an engaging experience that could support and encourage collaboration. Hence the choice of interface for programming became important. Practically it is possible to write programs using interfaces like keyboards, mouse or even mobile phones. However, it becomes difficult and challenging to foster a group learning environment when multiple participants are involved. Tangibles naturally promote this collaborative environment where multiple participants can simultaneously participate, experiment and work on the same problem playfully. Moreover, traditional teaching methods have always emphasized teaching a particular programming language and its syntax rather than problem-solving. Using tangibles, we can reduce the cognitive burden on children by allowing them to select from a deck of cards instead of having them to memorize syntax rules.
+
+    p Coodle's programming language is reasonably straightforward, designed to teach kids the basic concepts of programming. This includes concepts like sequential processing of commands, conditional branching and iterations. Like Logo and Code Weaver, the program comprises of 'opcodes' and 'operands', with each being represented by a physical block. Opcode identifies the type of command, while operand expresses the parameters or numbers related to the command.
+
+    p While designing the language blocks, three main aspects were mainly taken care of: its colour, symbol, and text. Each block has been assigned a different symbol so that its function and usage is visually understandable. Also, blocks of different types have been assigned different colours so that it becomes easier to identify nested chunks of blocks. For example, START and STOP blocks are in red to map out the entire territory within which the program resides.
 
     ul.single
-      li.image(style="width: 50%")
-        img(src="../projects-coodle-02.png", alt="Different Coodle blocks")
-        span Different Coodle blocks
+      li.image(style="width: 35%")
+        img(src="../projects-coodle-03.png", alt="Coodle command blocks")
+        span Coommand blocks available in Coodle
 
     h3 Mobile and Web application
-    p The mobile application is meant for capturing snapshots of the blocks which is then processed and displayed as a visual output. The application offers three different modes: Learn, Draw and Play. Each mode is meant to offer children different learning experiences. Learn mode is meant to help children gradually learn the intricacies of Programming concepts through hand-on tutorials, while Play mode lets them apply their newly learnt skills in solving puzzles. Finally, the Draw mode is a sandbox meant for experimentation. To complement our mobile application, there’s also a corresponding web application which can be accessed using a desktop computer and can easily be used by connecting a webcam to the computer. It has all the features and functionalities as that of its mobile counterpart.
+    p The mobile application is meant for capturing snapshots of the blocks. The captured image is then processed and executed as a visual output on the screen. The application offers three different modes: Learn, Draw and Play. Each mode is meant to offer children different learning experiences. Learn mode helps children gradually learn the intricacies of Programming concepts through hand-on tutorials, while Play mode lets them apply their newly learnt skills in solving puzzles. Finally, the Draw mode is a sandbox meant for experimentation.
+
+    p To complement our mobile application, we have also provided a corresponding web application which can be accessed using a desktop computer and can easily be used by connecting a webcam to the computer. It has all the features and functionalities of its mobile counterpart but is mainly meant for teachers to demonstrate Coodle's functionalities to the entire classroom.
     
     ul.single
-      li.image(style="width: 75%")
-        img(src="../projects-coodle-03.png", alt="Coodle mobile application")
-        span Coodle mobile application
+      li.image(style="width: 110%")
+        img(src="../projects-coodle-04.png", alt="Coodle mobile application")
+        span Coodle mobile application. (a) The application offers three modes: Learn, Draw and Play. (b) Learn mode lets you select a lesson that teaches a particular programming concept. (c) Draw mode is a sandbox meant for experimentation. (d) Puzzle mode offers puzzles that are to be solved using code. (e) The execution screen for one of the puzzles.
     
+    h2 Implementation
+    p To successfully compile and execute a program, we first apply image recognition on the program's captured image to detect the different code blocks and their locations. Once we have a digital sequence of these blocks (called tokens), it is compiled using our own set of language rules to generate an AST (Abstract syntax tree) in Javascript. For execution, we analyze every subtree in Javascript, executing different functions for different operators and finally translating them into a sequence of animations using custom Javascript functions that render a different visual output for different opcodes and operands. In the subsections below, we provide a more detailed description of our implementation.
+
     ul.single
       li.image(style="width: 75%")
-        img(src="../projects-coodle-04.png", alt="Coodle web application")
-        span Coodle web application
+        img(src="../projects-coodle-05.png", alt="Implementation details")
+        span A backend server processes the image for language tokens and sends them back to the mobile for execution.
+
+    h3 Object Detection
+    p To generate a digital sequence of blocks, we first separate each block from the program's entire image. We use the Canny edge detection
+      sup [
+            a(href="#3") 3
+            | ]
+      |algorithm for separating the edges of the block and then segment them based on the area covered by their edges. We then create a list of blocks in the order of their appearance in the image using coordinates of their bounding boxes obtained from the Canny edge detection algorithm. We then apply the YOLO
+      sup [
+          a(href="#7") 7
+          | ]
+      |detection algorithm on each block separately to obtain the type of opcode or operand they represent. In this way, a list of tokens is generated that can be passed to the interpreter.
+
+    h3 Syntax Analysis
+    p Now that we have a sequence of tokens with their corresponding line numbers, the next step is to perform a syntax analysis to generate an AST that can be executed. A Recursive descent parser written in Javascript is fed the detected sequence of tokens as input, producing the desired AST.
+
+    h3 Execution
+    p Once the user hits the play button after compilation, the application begins traversing the AST from top to bottom in left to right direction. Based on the node type of AST, we perform different operations. For example, when we encounter the node ROTATE 90, it becomes a function call to rotate(90). For each atomic operation, we have a corresponding Javascript API written using p5.js
+      sup [
+            a(href="#5") 5
+            | ]
+      |, which translates the command into visuals on the p5.js canvas. Alternatively, in case of an IF-ELSE type node, we check the condition, and execute the left subtree if the condition is true, or the right subtree if the condition is false.
+
+    h2 Evaluation
+    p To inform the future design iterations of Coodle, we conducted a small evaluation where we interviewed three public school teachers who teach programming to middle school kids. The interview was held online, where we first gave them a brief explanation of what our tool does and how to use it, and then showed them a video demonstration of it. We then asked them several questions pertaining to the usability of our tool. From this discussion came several advantages and disadvantages of using Coodle to teach programming to kids at school.
+
+    p One of the advantages mentioned during the evaluation was that Coodle could easily be integrated into a classroom setting where kids can sit and work out a problem together. Due to the interface's tangible nature, the teacher can easily enter the discussion as and when needed. The teacher is not required to look into the smartphone if an error pops up as she can directly interact with the blocks arranged on the children's desk.
+
+    p There was a varied opinion on whether it would reduce costs or not. One of the evaluators pointed out that though a smartphone costs less than a traditional desktop, the desktop will still be required as the middle school curriculum teaches more than just fundamental programming concepts. Hence it will be unlikely for the school to give funds for additional smartphone purchase. Another evaluator said that Coodle could be an excellent self-learning tool for kids who do not own a desktop while one of their family members owns a smartphone. They can then learn and play with Coodle along with their siblings at no additional cost of a desktop.
+
+    h2 Conclusion
+    p In this paper, we proposed a low-cost alternative for teaching programming to kids. The system uses tangible blocks that can be arranged to create a program and then be scanned and executed using a smartphone. We also conducted a short evaluation of the tool by conducting interviews with teachers. The evaluation suggested that the tool is unlikely to replace desktop computers but can be a great self-learning alternative for children at home who do not own a desktop. Further study with children is necessary to obtain a comprehensive picture of its potential. We are also considering to add new blocks that would let kids interact with the world around them.
+
+    h2 References
+    ol
+      li 
+        a(href="https://ieeexplore.ieee.org/document/4660189" id="1") TurTan: A tangible programming language for creative exploration
+      li 
+        a(href="https://doi.org/10.1145/258549.258715" id="2") Tangible Bits: Towards Seamless Interfaces between People, Bits and Atoms
+      li
+        a(href="https://www.docs.opencv.org/master/da/d22/tutorial_py_canny.html" id="3") OpenCV Library: Canny Edge Detection Algorithm
+      li 
+        a(href="https://doi.org/10.1145/1868358.1868363" id="4") The Scratch Programming Language and Environment
+      li 
+        a(href="https://p5js.org/" id="5") p5.js by Processing Foundation 
+      li 
+        a(href="https://doi.org/10.1145/800193.569942" id="6") On Making a Theorem for a Child
+      li 
+        a(href="http://arxiv.org/abs/1506.02640" id="7") You Only Look Once: Unified, Real-Time Object Detection.
+      li 
+        a(href="https://doi.org/10.1145/3355056.3364561" id="8") Code Weaver: A Tangible Programming Learning Tool with Mixed Reality Interface
