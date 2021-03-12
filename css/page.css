@@ -224,6 +224,10 @@ li a:hover {
   font-weight: 500;
   color: #424242;
 }
+.comment {
+  width: 800px;
+  margin-top: 20px;
+}
 @media screen and (max-width: 480px) {
   .page {
     width: 90vw;
@@ -247,5 +251,9 @@ li a:hover {
   .page .double .video img,
   .page .single .video img {
     width: 100% !important;
+  }
+  .comment {
+    width: 90vw;
+    margin-top: 20px;
   }
 }
