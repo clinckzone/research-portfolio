@@ -38,18 +38,18 @@ router.get("/projects-flappy-rockets", function(req, res) {
 	});
   });
 
-	router.get("/projects-destech-challenge", function(req, res) {
-		res.render("projects-destech-challenge", {
-			title: '🥇 Urban Trails',
-			stylesheet: '../page.css'
-		});
+router.get("/projects-destech-challenge", function(req, res) {
+	res.render("projects-destech-challenge", {
+		title: '🥇 Urban Trails',
+		stylesheet: '../page.css'
 	});
+});
 
-	router.get("/projects-static-site-generator", function(req, res) {
-		res.render("projects-static-site-generator", {
-			title: '💻 Static Site Generator',
-			stylesheet: '../page.css'
-		});
+router.get("/projects-static-site-generator", function(req, res) {
+	res.render("projects-static-site-generator", {
+		title: '💻 Static Site Generator',
+		stylesheet: '../page.css'
 	});
+});
 
 module.exports = router;

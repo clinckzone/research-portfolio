@@ -25,7 +25,7 @@ server.get("/", function(req, res) {
 });
 
 server.get("/about", function(req, res) {
-  res.render("about.pug", {
+  res.render("about", {
     title: 'About',
     stylesheet: 'page.css'
   });
