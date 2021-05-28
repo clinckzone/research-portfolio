@@ -31,4 +31,11 @@ router.get("/blog-lost-and-found", function(req, res) {
 	});
 });
 
+router.get("/blog-razorpay-internship", function(req, res) {
+	res.render("blog-razorpay-internship", {
+		title: '👨‍💻 Razorpay Internship',
+		stylesheet: '../page.css'
+	});
+});
+
 module.exports = router;
